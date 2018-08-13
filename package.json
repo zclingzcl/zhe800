@@ -44,6 +44,7 @@
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "node-sass": "^4.9.3",
+    "open-browser-webpack-plugin": "^0.0.5",
     "sass": "^1.10.4",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.21.0",

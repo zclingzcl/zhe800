@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const pageConfig = require('./page.config.js');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 let webpackConfig = {
     mode: 'none',
@@ -107,6 +108,9 @@ let webpackConfig = {
             jQuery: "jquery",
             jquery: "jquery",
             "window.jQuery": "jquery"
+        }),
+        new OpenBrowserPlugin({
+            url: 'http://localhost:8088'
         })
     ],
     // 起本地服务
