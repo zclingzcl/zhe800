@@ -19,15 +19,15 @@ let webpackConfig = {
     },
     module: {
         rules: [
-            {
-                test: /\.(js)$/,
-                loader: 'eslint-loader',
-                enforce: 'pre',
-                include: [path.join(__dirname, "./src")],
-                options: {
-                    formatter: require('eslint-friendly-formatter')
-                }
-            },
+            // {
+            //     test: /\.(js)$/,
+            //     loader: 'eslint-loader',
+            //     enforce: 'pre',
+            //     include: [path.join(__dirname, "./src")],
+            //     options: {
+            //         formatter: require('eslint-friendly-formatter')
+            //     }
+            // },
             // html中的img标签
             {
                 test: /\.html$/,

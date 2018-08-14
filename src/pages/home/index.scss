@@ -207,7 +207,10 @@
   height: 40px;
   text-align: center;
 }
-
+.nav li a.nav_active{
+  background:#e60044;
+  color:#fff;
+}
 .nav li:nth-child(1) a {
   width: 150px;
 }
@@ -215,7 +218,7 @@
 .nav li a:hover {
   height: 37px;
   border-bottom: 3px solid #e60044;
-  box-shadow: 0 10px 10px #666;
+  box-shadow: 0 5px 10px #666;
 }
 
 .sign {
@@ -263,6 +266,7 @@
   float: left;
   padding: 0 6px;
   background: #fff;
+  position:relative;
 }
 
 .index_nav li {
@@ -307,6 +311,86 @@
 
 .index_nav li a:hover {
   text-decoration: underline;
+}
+
+.nav_pop{
+  width:370px;
+  height:303px;
+  position:absolute;
+  top:0;
+  left:100%;
+  padding-left:13px;
+  border:1px solid #e5e5e5;
+  background:#fff;
+  overflow:hidden;
+  z-index:1000;
+  display:none;
+  .nav_pop_left{
+    float:left;
+    width:197px;
+    height:303px;
+    .pop_second{
+      width:196px;
+      overflow:hidden;
+      color:#f00;
+      h3{
+        height:32px;
+        line-height:32px;
+        text-align:left;
+        font-size:14px;
+        border-bottom:1px solid #e5e5e5;
+        font-weight:normal;
+      }
+    }
+    ul{
+      width:197px;
+      height:121px;
+      float:left;
+      overflow:hidden;
+      background:#fff;
+      padding:0 6px;
+      li{
+        float:left;
+        height:12px;
+        margin:10px 14px 6px 0;
+        line-height:14px;
+        font-size:12px;
+        a{
+          color:#666;
+          white-space:nowrap;
+          display:block;
+          &:hover{
+            color:#f00;
+            text-decoration:none;
+          }
+        }
+      }
+    }
+    #nav_one{
+      height:270px;
+    }
+  }
+
+  .nav_pop_right{
+    float:left;
+    width:152px;
+    height:290px;
+    padding:6px 10px 0 11px;
+    vertical-align:middle;
+    a{
+      display:block;
+      width:138px;
+      height:91px;
+      margin-bottom:6px;
+      border:1px solid transparent;
+      padding:0 6px;
+      img{
+        width:140px;
+        height:93px;
+        vertical-align:center;
+      }
+    }
+  }
 }
 
 .wrapper_right {
@@ -464,6 +548,101 @@
 
 .banner_userb p {
   padding-top: 70px;
+}
+
+/* junav_fix */
+.junav_fix{
+  height:83px;
+  width:100%;
+  box-shadow:0 0 5px #646464;
+  background:#fff;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:10000;
+  overflow:hidden;
+  display:none;
+  .junav_fix_top{
+    height:40px;
+    .fix_nav{
+      float:left;
+      width:780px;
+      li{
+        float:left;
+        a{
+          display:block;
+          height:40px;
+          line-height:40px;
+          margin-right:20px;
+          color:#666;
+          &:hover{
+            color:#e60044;
+          }
+        }
+        .tobold{
+          font-weight:bold;
+          color:#e60044;
+        }
+      }
+    }
+    .fix_search{
+      width:206px;
+      height:30px;
+      float:right;
+      margin-top:5px;
+      form{
+        width:210px;
+        height:29px;
+        .fix_txt{
+          width:114px;
+          padding-left:10px;
+          height:27px;
+          border:1px solid #e60044;
+          float:left;
+          line-height:28px;
+          background:#fff;
+          color:#999;
+          font-size:12px;
+        }
+        .fix_btn{
+          width:82px;
+          height:29px;
+          float:left;
+          border:0;
+          cursor: pointer;
+          background:url("//status.tuanimg.com/statics/zhe/common/img/index-common.png") -189px 0 no-repeat;
+        }
+      }
+
+    }
+  }
+  .junav_fix_bottom{
+    height:40px;
+    border-top:3px solid #ff404c;
+    .areahome{
+      width:1200px;
+      margin:0 auto;
+      li{
+        float:left;
+        a{
+          display:block;
+          height:40px;
+          line-height:40px;
+          margin-right:20px;
+          color:#666;
+          &:hover{
+            color:#e60044;
+          }
+
+        }
+        .tobold{
+          font-weight:bold;
+          color:#e60044;
+        }
+      }
+    }
+
+  }
 }
 
 /* brand */
@@ -1046,10 +1225,36 @@
 .coupon_collect a:hover {
   color: #ec1611;
 }
+.pages{
+  margin-bottom:22px;
+  height:50px;
+  padding:20px 0;
+  position:relative;
+  .list_page{
+    text-align:center;
+    vertical-align:middle;
+    width:400px;
+    height:50px;
+  }
+}
+
 
 .index_bottom{
   height:260px;
   background: #f2f2f2;
+}
+
+/* sidebar */
+.sidebar{
+  width:34px;
+  position:fixed;
+  bottom:0;
+  right:0;
+  background:#000;
+  height:100%;
+  z-index:1000001;
+  font-size:12px;
+  color:#fff;
 }
 
  /* about */
