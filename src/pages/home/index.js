@@ -3,7 +3,6 @@ import '../../common/css/com.less';
 import './index.less';
 import './index.scss';
 import indexSideNavData from './navData.js';
-import 'swiper';
 
 console.log(indexSideNavData);
 
