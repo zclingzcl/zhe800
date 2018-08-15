@@ -3,6 +3,7 @@ import '../../common/css/com.less';
 import './index.less';
 import './index.scss';
 import indexSideNavData from './navData.js';
+import 'swiper';
 
 console.log(indexSideNavData);
 
@@ -38,19 +39,58 @@ $(function () {
 
 });
 
-var myData = {};
-
 function getData(url, name) {
     return $.ajax({
         url: '/api/' + url,
         type: 'get',
-        async: false,
+        // async: false,
         dataType: 'json',
         hearders: {
             "content-type": "application/json;"
         },
         success: function (data, status) {
-            myData[name] = data;
+            switch (name) {
+                case 'index_new':
+                    let session = data.session;
+                    for (let i = 0; i < session.length; i++) {
+                        $(".flashSale_top_r").append('<li><a href="#" class="' + (session[i].current ? "active" : "") + '">' + session[i].hhmm + '</a></li>')
+                    }
+                    let jsons = data.jsons;
+                    jsons.map((item, i) => {
+                        if(item.xianshi.activity_stock) {
+                            $(".flashSale_list").append(`<li class="flashSale_shop">
+                                <a href="#">
+                                    <div class="dealCon">
+                                        <img src=${item.xianshi.image} />
+                                        <div class="stock">还剩${item.xianshi.activity_stock}件 抢完恢复原价${item.xianshi.list_price}元</div>
+                                    </div>
+                                    <span>￥<b>${item.xianshi.price}</b></span>
+                                    <p title="${item.xianshi.fulltitle}">${item.xianshi.fulltitle}</p>
+                                </a>
+                            </li>`)
+                        }else{
+                            $(".flashSale_list").append(`<li class="flashSale_shop">
+                                <a href="#">
+                                    <div class="dealCon">
+                                        <img src=${item.xianshi.image} />
+                                    </div>
+                                    <span>￥<b>${item.xianshi.price}</b></span>
+                                    <p title="${item.xianshi.fulltitle}">${item.xianshi.fulltitle}</p>
+                                </a>
+                            </li>`)
+                        }
+                    });
+                    $(".flashSale_bottom").banner({
+                        list:$(".flashSale_bottom .flashSale_list"),
+                        items:$(".flashSale_bottom .flashSale_shop"),
+                        left:$(".flashSale_bottom .flashSale_left"),
+                        right:$(".flashSale_bottom .flashSale_right"),
+                        pageNum:6
+                    });
+                    break;
+                case 'get_html':
+                    $(".hot_bottom").append(data.html.replace(/src="/g, 'src_o="').replace(/src_n/g, 'src'));
+            }
         },
         fail: function (err, status) {
             console.log(err)
@@ -62,71 +102,20 @@ function getmData(url, name) {
     return $.ajax({
         url: '/mapi/' + url,
         type: 'get',
-        async: false,
+        // async: false,
         dataType: 'json',
         hearders: {
             "content-type": "application/json;"
         },
         success: function (data, status) {
-            myData[name] = data;
-        },
-        fail: function (err, status) {
-            console.log(err)
-        }
-    });
-}
-
-getData('ajax_api/get_navi_button', 'get_navi_button');
-getData('zhe800_n_api/xsq/index_new', 'index_new');
-getData('cn/list/hotSale/get_html', 'get_html');
-getmData('list/deals/v2?user_id=&user_type=1&user_role=0&limit=60&offset=60&visit_bit=111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000&cookie_id=18464771211533624800&client_type=1&image_type=si3&url_name=&order=&shop_type=&min_age=&max_age=&gender=0', 'index_deal');
-
-console.log(myData);
-
-var session = myData.index_new.session;
-for (let i = 0; i < session.length; i++) {
-    $(".flashSale_top_r").append('<li><a href="#" class="' + (session[i].current ? "active" : "") + '">' + session[i].hhmm + '</a></li>')
-}
-
-var jsons = myData.index_new.jsons;
-jsons.map((item, i) => {
-    let child;
-    if(item.xianshi.activity_stock){
-        child=`<li class="flashSale_shop">
-						<a href="#">
-							<div class="dealCon">
-								<img src=${item.xianshi.image} />
-								<div class="stock">还剩${item.xianshi.activity_stock}件 抢完恢复原价${item.xianshi.list_price}元</div>
-							</div>
-							<span>￥<b>${item.xianshi.price}</b></span>
-							<p title="${item.xianshi.fulltitle}">${item.xianshi.fulltitle}</p>
-						</a>
-					</li>`
-    }else{
-        child=`<li class="flashSale_shop">
-						<a href="#">
-							<div class="dealCon">
-								<img src=${item.xianshi.image} />
-								
-							</div>
-							<span>￥<b>${item.xianshi.price}</b></span>
-							<p title="${item.xianshi.fulltitle}">${item.xianshi.fulltitle}</p>
-						</a>
-					</li>`
-    }
-
-
-    $(".flashSale_list").append(child)
-});
-
-$(".hot_bottom").append(myData.get_html.html.replace(/src="/g, 'src_o="').replace(/src_n/g, 'src'));
-
-let list = myData.index_deal.objects;
-list.map((item, i) => {
-    let expire_time = new Date(item.expire_timestamp - new Date().getTime()).getDate() - 1;
-    let child;
-    if (item.deal) {
-        child = `<div class="list_shop">
+            switch (name) {
+                case 'index_deal':
+                    let list = data.objects;
+                    list.map((item, i) => {
+                        let expire_time = new Date(item.expire_timestamp - new Date().getTime()).getDate() - 1;
+                        let child;
+                        if (item.deal) {
+                            child = `<div class="list_shop">
 						<a href=${item.deal.out_url}>
 							<img src=${item.image_url} />						
 						</a>
@@ -139,8 +128,8 @@ list.map((item, i) => {
 							<a href="#">收藏品牌</a>
 						</div>
 					</div>`
-    } else if (item.brand) {
-        child = `<div class="list_shop">
+                        } else if (item.brand) {
+                            child = `<div class="list_shop">
 						<a href=${item.brand.out_url}>
 							<img src=${item.image_url} />						
 						</a>
@@ -153,10 +142,24 @@ list.map((item, i) => {
 							<a href="#">收藏品牌</a>
 						</div>
 					</div>`
-    }
+                        }
 
-    $(".list_main").append(child)
-});
+                        $(".list_main").append(child)
+                    });
+                    break;
+            }
+        },
+        fail: function (err, status) {
+            console.log(err)
+        }
+    });
+}
+
+getData('ajax_api/get_navi_button', 'get_navi_button');
+getData('zhe800_n_api/xsq/index_new', 'index_new');
+getData('cn/list/hotSale/get_html', 'get_html');
+getmData('list/deals/v2?user_id=&user_type=1&user_role=0&limit=60&offset=60&visit_bit=111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000&cookie_id=18464771211533624800&client_type=1&image_type=si3&url_name=&order=&shop_type=&min_age=&max_age=&gender=0', 'index_deal');
+
 
 
 ;(function($){
@@ -165,15 +168,15 @@ list.map((item, i) => {
         this.children(".index_nav").children("li").hover(function () {
 
             $(this)				//鼠标经过谁就是谁
-            .siblings()			//除了鼠标经过的这个，其他的所有兄弟
-            .children(".nav_pop")		//兄弟的子元素ul
-            .stop().css({
+                .siblings()			//除了鼠标经过的这个，其他的所有兄弟
+                .children(".nav_pop")		//兄弟的子元素ul
+                .stop().css({
                 display:"none"
             })
-            .end()				//除了鼠标经过的这个，其他的所有兄弟
-            .end()				//鼠标经过谁就是谁
-            .children(".nav_pop")		//鼠标经过谁就是谁    的    ul
-            .stop().css({
+                .end()				//除了鼠标经过的这个，其他的所有兄弟
+                .end()				//鼠标经过谁就是谁
+                .children(".nav_pop")		//鼠标经过谁就是谁    的    ul
+                .stop().css({
                 display:"block"
             });
 
@@ -255,14 +258,6 @@ $(".wrapper").nav();
     }
 })(jQuery);
 
-
-$(".flashSale_bottom").banner({
-    list:$(".flashSale_bottom .flashSale_list"),
-    items:$(".flashSale_bottom .flashSale_shop"),
-    left:$(".flashSale_bottom .flashSale_left"),
-    right:$(".flashSale_bottom .flashSale_right"),
-    pageNum:6
-});
 
 
 
