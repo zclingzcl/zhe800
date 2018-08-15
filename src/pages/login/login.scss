@@ -1,0 +1,220 @@
+body{background:#f5f5f5;}
+.content{
+  width:980px;
+  margin:0 auto;
+}
+
+/* top_head */
+.top_head{
+  height:57px;
+  padding-top:20px;
+  .logo{
+    float:left;
+    width:232px;
+    height:57px;
+    img{
+      width:232px;
+      height:57px;
+    }
+  }
+  .ok_re{
+    float:right;
+    width:130px;
+    height:16px;
+    margin-top:20px;
+    font-size:12px;
+    color:#666;
+    .regist{
+      font-size:12px;
+      color:#0078c6;
+    }
+  }
+}
+
+/* tao_r */
+.tao_r{
+  height:550px;
+  background:#fff;
+  overflow:hidden;
+  margin:10px auto;
+  .left{
+    width:390px;
+    height:550px;
+    float:left;
+    .left_b{
+      width:460px;
+      height:330px;
+      margin-top:60px;
+      margin-left:90px;
+      display:block;
+    }
+  }
+  .right{
+    width:340px;
+    height:330px;
+    float:right;
+    margin-right:90px;
+    margin-top:60px;
+    .login_wapper{
+      height:420px;
+      width:310px;
+      padding:38px 0 20px;
+      margin-left:30px;
+      position:relative;
+      border:1px solid #e5e5e5;
+      .notice{
+        display:block;
+        width:101px;
+        height:20px;
+        font-size:12px;
+        position:absolute;
+        right:42px;
+        top:8px;
+        color:#e60044;
+        text-align:center;
+        line-height:20px;
+
+      }
+      .hwid{
+        width:310px;
+        height:16px;
+        padding-left:20px;
+        color:#666;
+        font-size:12px;
+        font-weight:normal;
+        line-height:16px;
+        i{
+          line-height:14px;
+          font-style:normal;
+          display:inline-block;
+          height:16px;
+        }
+      }
+      .login_mid{
+        width:290px;
+        height:360px;
+        padding-left:20px;
+        position:relative;
+        #login_form{
+          width:258px;
+          height:260px;
+          position:relative;
+          .username,.password{
+            width:183px;
+            height:18px;
+            padding:10px;
+            padding-left:40px;
+            border:1px solid #c4c4c4;
+            line-height:18px;
+            vertical-align:middle;
+            font-size:12px;
+            color:#999;
+            margin:15px 0 5px;
+          }
+          .user{
+            width:12px;
+            height:12px;
+            position:absolute;
+            top:28px;
+            left:15px;
+            background:url("//z5.tuanimg.com/v1/login/img/login_user.png") no-repeat;
+          }
+          .keyword{
+            width:12px;
+            height:12px;
+            position:absolute;
+            top:88px;
+            left:15px;
+            background:url("//z5.tuanimg.com/v1/login/img/login_user.png") -17px 0 no-repeat;
+          }
+          .validate{
+            margin-top:15px;
+            width:240px;
+            height:34px;
+            background:#e8e8e8;
+            position:relative;
+            color:#666;
+            font-size:12px;
+            line-height:34px;
+            text-align:center;
+            #scale_txt{
+              width:240px;
+              height:34px;
+              position:absolute;
+              z-index:99999;
+            }
+            #scale_move{
+              display:block;
+              width:40px;
+              height:34px;
+              border:1px solid #ccc;
+              position:absolute;
+              left:0;
+              top:-1px;
+              background:#fff;
+            }
+            #scale_bg{
+              height:34px;
+              width:0;
+              background:green;
+              position:absolute;
+              left:0;
+              top:0;
+              z-index:1;
+            }
+          }
+          .login_num{
+            margin-top:40px;
+            width:258px;
+            .login_submit{
+              float:left;
+              width:122px;
+              height:42px;
+              background:url("//z5.tuanimg.com/v1/login/img/login_signin.png") no-repeat;
+              margin-right:25px;
+              border:0;
+            }
+            .forget_num{
+              font-size:12px;
+              float:right;
+              margin-top:23px;
+              color:#666;
+              margin-right:37px;
+              &:hover{
+                text-decoration:underline;
+              }
+            }
+          }
+        }
+        .othlogin{
+          margin-top:20px;
+
+          h2{
+            padding-top:10px;
+            font-size:12px;
+            color:#666;
+            line-height:20px;
+            font-weight:normal;
+          }
+          .other{
+            margin-top:15px;
+            height:40px;
+            a{
+              float:left;
+              margin-right:10px;
+              width:92px;
+              height:33px;
+              overflow:hidden;
+              &:nth-child(1){
+                background:url("//z5.tuanimg.com/v2/login/img/bg2.png") 0 0 no-repeat;
+              }
+              &:nth-child(2){
+                background:url("//z5.tuanimg.com/v1/jifen/welfare/img/hao123dialog.png") 0 -88px no-repeat;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

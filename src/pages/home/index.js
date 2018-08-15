@@ -90,7 +90,9 @@ for (let i = 0; i < session.length; i++) {
 
 var jsons = myData.index_new.jsons;
 jsons.map((item, i) => {
-    $(".flashSale_list").append(`<li class="flashSale_shop">
+    let child;
+    if(item.xianshi.activity_stock){
+        child=`<li class="flashSale_shop">
 						<a href="#">
 							<div class="dealCon">
 								<img src=${item.xianshi.image} />
@@ -99,7 +101,22 @@ jsons.map((item, i) => {
 							<span>￥<b>${item.xianshi.price}</b></span>
 							<p title="${item.xianshi.fulltitle}">${item.xianshi.fulltitle}</p>
 						</a>
-					</li>`)
+					</li>`
+    }else{
+        child=`<li class="flashSale_shop">
+						<a href="#">
+							<div class="dealCon">
+								<img src=${item.xianshi.image} />
+								
+							</div>
+							<span>￥<b>${item.xianshi.price}</b></span>
+							<p title="${item.xianshi.fulltitle}">${item.xianshi.fulltitle}</p>
+						</a>
+					</li>`
+    }
+
+
+    $(".flashSale_list").append(child)
 });
 
 $(".hot_bottom").append(myData.get_html.html.replace(/src="/g, 'src_o="').replace(/src_n/g, 'src'));
@@ -172,52 +189,80 @@ list.map((item, i) => {
 $(".wrapper").nav();
 
 
-class Page{
-    constructor(options){
-        this.list = options.list;
-        this.left = options.left;
-        this.right = options.right;
-        this.num = options.pageNum;
 
-        this.jsons=jsons;
-        this.index = 0;
-        this.maxNum = Math.ceil(this.jsons.length/this.num);
+;(function($){
+    "use strict";
 
-        this.init();
-    }
-    init(){
-        var that = this;
-        this.left.click(function(){
-            that.changeIndex("left")
-        })
-        this.right.click(function(){
-            that.changeIndex("right")
-        })
-    }
-    changeIndex(type){
-        if(type == "left"){
-            if(this.index == 0){
-                this.index = this.maxNum-1;
-            }else{
-                this.index--;
+    $.fn.banner=function(options){
+        this.LOCAL={
+            maxNum:Math.ceil(options.items.length/options.pageNum),
+            iNow:0,
+            iPrev:Math.ceil(options.items.length/options.pageNum)-1
+        };
+        options.list.css({
+            width:1200 * this.LOCAL.maxNum +"px"
+        });
+
+        var that=this;
+
+        options.left.on("click",function(){
+            that.LOCAL.iNow--;
+            if(that.LOCAL.iNow < 0) {
+                options.list.find('li').each(function (index,element) {
+                    if(index>options.list.find('li').length-6){
+                        $(this).css({position: 'relative',left: -1200 * that.LOCAL.maxNum +"px"})
+                    }
+                })
             }
-        }else{
-            if(this.index == this.maxNum-1){
-                this.index = 0
-            }else{
-                this.index++;
+            options.list.stop().animate({
+                left:-1200 *(that.LOCAL.iNow ) +"px"
+            },function () {
+                if(that.LOCAL.iNow < 0) {
+                    that.LOCAL.iNow = that.LOCAL.maxNum-1;
+                    options.list.find('li').each(function (index,element) {
+                        if(index>options.list.find('li').length-6){
+                            $(this).css({position: '',left: ''})
+                        }
+                    })
+                    $(this).css({left: -1200 * (that.LOCAL.maxNum-1) +"px"})
+                }
+            })
+        });
+        options.right.on("click",function(){
+            that.LOCAL.iNow++;
+            if(that.LOCAL.iNow > that.LOCAL.maxNum-1) {
+                options.list.find('li').each(function (index,element) {
+                    if(index<6){
+                        $(this).css({position: 'relative',left: 1200 * that.LOCAL.maxNum +"px"})
+                    }
+                })
             }
-        }
+            options.list.stop().animate({
+                left:-1200 * that.LOCAL.iNow +"px"
+            },function () {
+                if(that.LOCAL.iNow > that.LOCAL.maxNum-1) {
+                    that.LOCAL.iNow = 0;
+                    options.list.find('li').each(function (index,element) {
+                        if(index<6){
+                            $(this).css({position: '',left: ''})
+                        }
+                    })
+                    $(this).css({left: 0})
+                }
+            })
+        });
+
     }
-}
+})(jQuery);
 
-new Page ({
-    list:document.querySelector("flashSale_list"),
-    pageNum:6,
-    left:document.querySelector("flashSale_left"),
-    right:document.querySelector("flashSale_right")
-})
 
+$(".flashSale_bottom").banner({
+    list:$(".flashSale_bottom .flashSale_list"),
+    items:$(".flashSale_bottom .flashSale_shop"),
+    left:$(".flashSale_bottom .flashSale_left"),
+    right:$(".flashSale_bottom .flashSale_right"),
+    pageNum:6
+});
 
 
 
