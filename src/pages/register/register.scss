@@ -1,0 +1,33 @@
+body{background:#f5f5f5;}
+.content{
+  width:980px;
+  margin:0 auto;
+}
+
+
+/* top_head */
+.top_head{
+  height:57px;
+  padding-top:20px;
+  .logo{
+    float:left;
+    width:232px;
+    height:57px;
+    img{
+      width:232px;
+      height:57px;
+    }
+  }
+  .ok_re{
+    float:right;
+    width:130px;
+    height:16px;
+    margin-top:20px;
+    font-size:12px;
+    color:#666;
+    .regist{
+      font-size:12px;
+      color:#0078c6;
+    }
+  }
+}
