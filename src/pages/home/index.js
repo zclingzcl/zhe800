@@ -1,10 +1,7 @@
 /* eslint-disable */
 import '../../common/css/com.less';
-import './index.less';
 import './index.scss';
-import indexSideNavData from './navData.js';
 
-console.log(indexSideNavData);
 
 
 $(function () {

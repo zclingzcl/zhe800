@@ -5,14 +5,73 @@
     <title>Title</title>
 </head>
 <body>
+<!-- top_head -->
 <div class="top_head content clear">
     <a href="#"  class="logo">
         <img src="//status.tuanimg.com/statics/zhe/dealList/img/login_logo.jpg" />
     </a>
 
     <p class="ok_re">已经有团800或折800帐号了？
-        <a href="#" class="regist">去登录</a>
+        <a href="login.html" class="regist">去登录</a>
     </p>
 </div>
+
+<!-- register_area -->
+<div class="register_area clear">
+    <div class="reg_left">
+        <div class="phone_box">
+            <label>手机号:</label>
+            <input type="text" id="phone" value="手机号码" />
+            <span id="txt_msg"></span>
+        </div>
+        <div class="pass1_box">
+            <label>密码：</label>
+            <input type="password" id="pass1" />
+            <span id="pass1_msg"></span>
+        </div>
+        <div class="pass2_box">
+            <label>确认密码：</label>
+            <input type="password" id="pass2" />
+            <span id="pass2_msg"></span>
+        </div>
+        <div class="proving">
+            <div id="proving_txt">请按住滑块，拖动到最右边</div>
+            <span id="proving_move">>></span>
+            <div id="proving_bg"></div>
+        </div>
+        <div class="i_code">
+            <label>验证码:</label>
+            <input type="text" id="validCode" />
+            <i id="v_code"></i>
+            <em id="change_code">看不清，换一张</em>
+        </div>
+        <p class="agreement">
+            <input type="checkbox" checked />
+            我已阅读并接受折800的<a href="https://help.zhe800.com/detail/82">《用户服务协议》</a>
+        </p>
+        <!--<input type="button" class="item" id="item" value="同意协议并注册" />-->
+        <a href="#" class="item" id="item">同意协议并注册</a>
+
+    </div>
+    <div class="reg_right">
+        <h3>还可以使用这些账号登录</h3>
+        <div class="morelogin clear">
+            <a href="#" class="i_btn_qq"></a>
+            <a href="#" class="i_btn_baidu"></a>
+        </div>
+
+    </div>
+</div>
+
+<div class="register_bottom">
+    <p><a href="#">京ICP证120075号&nbsp;</a>&nbsp;京ICP备10051110号-5&nbsp;<a href="#">京公网安备11010502025623&nbsp;</a>&nbsp;
+        统一社会信用代码 91110105571298269B&nbsp;食品流通许可证SP1101051510352397 </p>
+    <div class="bottom_center clear">
+        <a href="#" class="bottom_l"></a>
+        <a href="#" class="bottom_c"></a>
+        <a href="#" class="bottom_r"></a>
+    </div>
+</div>
 </body>
+
 </html>

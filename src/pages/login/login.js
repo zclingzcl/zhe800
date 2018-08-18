@@ -5,9 +5,9 @@ import './login.scss';
 
 var user=document.querySelector(".username");
 var word=document.querySelector(".passnum");
-var oMove=document.getElementsByClassName("scale_move");
-var oTxt=document.querySelector(".scale_txt");
-var oBg=document.querySelector(".scale_bg");
+var oMove=document.getElementById("scale_move");
+var oTxt=document.getElementById("scale_txt");
+var oBg=document.getElementById("scale_bg");
 var validate=document.querySelector(".validate");
 
 user.content="邮箱/手机号/用户名";
@@ -43,7 +43,7 @@ word.onblur=function(){
 
 oMove.onmousedown=function(eve){
     var e=eve || window.event;
-    var disX=e.offsetX;
+    var disX=e.clientX;
 
     document.onmousemove=function(eve){
         var e=eve || window.event;
@@ -62,7 +62,6 @@ oMove.onmousedown=function(eve){
             oBg.style.color="#fff";
             oTxt.innerHTML="";
             oMove.innerHTML="√";
-
         }else{
             oBg.innerHTML="";
             oTxt.innerHTML="请按住滑块，拖动到最右边";

@@ -1,0 +1,165 @@
+/* list_area */
+.listarea{
+  background:#f2f2f2;
+}
+.suit{
+  padding-top:14px;
+  height:30px;
+  font-size:12px;
+  span{
+    float:left;
+    color:#333;
+    line-height:28px;
+  }
+  .suit_nav{
+    float:right;
+    width:566px;
+    li{
+      float:left;
+      position:relative;
+      a{
+        font-size:12px;
+        color:#999;
+        padding:9px;
+        display:block;
+        &:hover{
+          color:#f00;
+        }
+      }
+      b{
+        height:12px;
+        border-right:1px solid #999;
+        position:absolute;
+        top:10px;
+        right:0;
+      }
+    }
+  }
+}
+.shopall{
+  height:36px;
+  background:#fff;
+  a{
+    float:left;
+    padding:0 12px;
+    line-height:36px;
+    font-size:12px;
+    color:#666;
+    &:hover{
+      color:#f00;
+    }
+
+  }
+  .act{
+    font-weight:bold;
+    color:#f00;
+  }
+}
+.sort_module{
+  height:38px;
+  margin:20px auto 0;
+  .sort_main{
+    height:38px;
+    background:#fff;
+    .sort_left{
+      float:left;
+      width:560px;
+      li{
+        float:left;
+        a{
+          display:block;
+          height:38px;
+          line-height:38px;
+          color:#666;
+          padding:0 16px;
+          font-size:12px;
+        }
+      }
+
+    }
+    .sort_right{
+      width:110px;
+      float:right;
+      margin-right:10px;
+      a{
+        line-height:38px;
+        color:#666;
+        font-size:12px;
+      }
+    }
+  }
+
+}
+
+.list_area{
+  width: 1222px;
+  height:3120px;
+  overflow:hidden;
+  margin: 20px auto 0;
+}
+.goodlist{
+  width: 1222px;
+  height:3000px;
+  overflow:hidden;
+  margin: 20px auto 0;
+
+}
+.goodlist .car_img{
+  width:62px;
+  background:url(https://status.tuanimg.com/statics/zhe/common/img/head_cart.png) no-repeat;
+}
+.page_bottom{
+  height:42px;
+  padding-top:20px;
+  padding-bottom:30px;
+  .list_page{
+    height:42px;
+    width:250px;
+    margin:0 auto;
+    .btn_l{
+      float:left;
+    }
+    .btn_r{
+      float:right;
+    }
+    span{
+      width:30px;
+      height:30px;
+      padding:10px;
+      a{
+        display:block;
+        width:30px;
+        height:30px;
+        line-height:30px;
+      }
+      &:first-child a{
+        background:url("//status.tuanimg.com/statics/zhe/common/img/prev_nextpng.png") 0 0 no-repeat;
+
+      }
+      &:last-child a{
+        background:url("//status.tuanimg.com/statics/zhe/common/img/prev_nextpng.png") -46px 0 no-repeat;
+
+      }
+    }
+    #page_num{
+      float:left;
+      text-align:center;
+      height:42px;
+      width:150px;
+      line-height:48px;
+      display:flex;
+      justify-content: space-around;
+      li{
+        height:42px;
+        width:20px;
+        line-height:48px;
+        text-align:center;
+        color:#999;
+        cursor:pointer;
+      }
+      .page_active{
+        color:#f00;
+      }
+    }
+  }
+}

@@ -9,5 +9,15 @@ module.exports = [
         name:'login',
         html:'login/login.html',
         jsEntry:'login/login.js'
+    },
+    {
+        name:'register',
+        html:'register/register.html',
+        jsEntry:'register/register.js'
+    },
+    {
+        name:'shoplist',
+        html:'shoplist/shoplist.html',
+        jsEntry:'shoplist/shoplist.js'
     }
 ]

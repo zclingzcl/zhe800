@@ -20,7 +20,7 @@ body{background:#f5f5f5;}
   }
   .ok_re{
     float:right;
-    width:130px;
+    width:240px;
     height:16px;
     margin-top:20px;
     font-size:12px;
@@ -28,6 +28,217 @@ body{background:#f5f5f5;}
     .regist{
       font-size:12px;
       color:#0078c6;
+    }
+  }
+}
+
+/* register_area */
+.register_area{
+  height:430px;
+  padding:40px 60px;
+  width:860px;
+  background:#fff;
+  margin:10px auto;
+  .reg_left{
+    width:430px;
+    height:100%;
+    float:left;
+    color:#999;
+    .phone_box,.pass1_box,.pass2_box,.i_code{
+      width:356px;
+      padding:15px 0 15px 74px;
+      position:relative;
+    }
+    #phone,#pass1,#pass2{
+      width:280px;
+      height:30px;
+      border:1px solid #d2d2d2;
+      padding:2px 8px;
+      line-height:30px;
+      border-radius:5px;
+      font-size:12px;
+      color:#999;
+    }
+    label{
+      width:74px;
+      height:36px;
+      text-align:right;
+      color:#666;
+      display:inline-block;
+      margin-left:-74px;
+      line-height:36px;
+    }
+    span{
+      line-height:26px;
+      position:absolute;
+      left:80px;
+      top:50px;
+      font-size:12px;
+    }
+    .proving{
+      width:300px;
+      height:34px;
+      margin:15px 0 15px 74px;
+      background:#e8e8e8;
+      position:relative;
+      color:#666;
+      font-size:12px;
+      line-height:34px;
+      text-align:center;
+      #proving_txt{
+        width:300px;
+        height:34px;
+        position:absolute;
+        z-index:99999;
+      }
+      #proving_move{
+        display:block;
+        width:40px;
+        height:34px;
+        line-height:34px;
+        border:1px solid #ccc;
+        position:absolute;
+        left:0;
+        top:-1px;
+        background:#fff;
+        z-index:100000;
+      }
+      #proving_bg{
+        height:34px;
+        width:0;
+        background:green;
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:1;
+      }
+    }
+
+    #validCode{
+      width:110px;
+      height:30px;
+      padding:2px 8px;
+      border:1px solid #d2d2d2;
+      border-radius:5px;
+    }
+    i{
+      color:#333;
+      width:100px;
+      height:30px;
+      font-size:18px;
+      line-height:30px;
+      text-align:center;
+      letter-spacing:4px;
+      border:1px solid #ccc;
+      background:#ffff00;
+      position:absolute;
+      left:220px;
+      top:18px;
+    }
+    em{
+      font-size:12px;
+      text-decoration:underline;
+      position:absolute;
+      left:330px;
+      top:40px;
+    }
+    .agreement{
+      width:356px;
+      padding:15px 0 15px 74px;
+      position:relative;
+      color:#666;
+      font-size:12px;
+      a{
+        color:#666;
+        font-size:12px;
+      }
+    }
+    .item{
+      width:178px;
+      margin:15px 0 15px 74px;
+      height:34px;
+      background:#ff3b37;
+      color:#fff;
+      display:block;
+      font-size:14px;
+      border:none;
+      line-height:34px;
+      text-align:center;
+    }
+  }
+  .reg_right{
+    width:430px;
+    height:205px;
+    float:left;
+    color:#999;
+    h3{
+      margin:40px 0 0 138px;
+      font-size:12px;
+      font-weight:normal;
+      color:#666;
+    }
+    .morelogin{
+      margin-left:85px;
+      margin-top:20px;
+      width:300px;
+      height:60px;
+      a{
+        float:left;
+        margin-left:20px;
+        width:92px;
+        height:33px;
+        overflow:hidden;
+        &:nth-child(1){
+          background:url("//z5.tuanimg.com/v2/login/img/bg2.png") 0 0 no-repeat;
+        }
+        &:nth-child(2){
+          background:url("//z5.tuanimg.com/v1/jifen/welfare/img/hao123dialog.png") 0 -88px no-repeat;
+        }
+      }
+    }
+  }
+
+}
+.register_bottom {
+  padding: 30px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  line-height: 30px;
+  a {
+    color: #999;
+    font-size: 12px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .bottom_center {
+    margin-top: 7px;
+    height: 28px;
+    width: 266px;
+    margin: 7px auto 0;
+    .bottom_l {
+      width: 70px;
+      height: 26px;
+      border: 1px solid #c3bfbe;
+      margin-right: 12px;
+      float: left;
+      background: url("//z6.tuanimg.com/v3/src/img/common/big_bg_img_v3.png") -886px -626px;
+    }
+    .bottom_c {
+      float: left;
+      margin-top: 1px;
+      margin-right: 12px;
+      width: 70px;
+      height: 26px;
+      background: url("//z6.tuanimg.com/v3/src/img/common/big_bg_img_v3.png") -885px -660px;
+    }
+    .bottom_r {
+      float: left;
+      margin-top: 1px;
+      width: 70px;
+      height: 26px;
+      background: url("//z6.tuanimg.com/v3/src/img/common/big_bg_img_v3.png") -885px -699px;
     }
   }
 }

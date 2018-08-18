@@ -16,3 +16,1115 @@ a{text-decoration:none; color:#000;}
 #margin0{
     margin:0;
 }
+
+
+
+/* toolbar */
+.toolbar {
+    height: 30px;
+    background: #fafafa;
+}
+
+.toolbar_nav {
+    width: 1200px;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    li {
+        float: right;
+        a {
+            color: #999;
+            font-size: 12px;
+            &:hover {
+                color: #ec1611;
+            }
+        }
+        &:nth-child(3) {
+            padding-left: 22px;
+            background: url("https://status.tuanimg.com/statics/zhe/common/img/head_cart.png") no-repeat 0 center;
+        }
+        &:nth-child(7) {
+            position: relative;
+            z-index: 9999;
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 0 5px #d4d4d4;
+                .toolbar_phone {
+                    background-color: #fff;
+                }
+                .dropdown {
+                    display: block;
+                }
+            }
+        }
+    }
+    .toolbar_load a {
+        color: #ec1611;
+    }
+}
+
+.toolbar_phone {
+    position: relative;
+    z-index: 9999;
+    background: url("./../../images/phone1.png") no-repeat 40px 7px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    width: 121px;
+    height: 120px;
+    padding: 8px;
+    background: #fff;
+    z-index: 999;
+    box-shadow: 0 0 5px #d4d4d4;
+    display: none;
+    a {
+        display: block;
+        width: 120px;
+        height: 120px;
+        background: url("//status.tuanimg.com/statics/zhe/components/toolbar/img/big_bg_img_v3.png") center no-repeat;
+    }
+}
+
+
+.toolbar_nav li span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #cf201c;
+    padding-left: 4px;
+}
+
+.toolbar_nav li b {
+    height: 12px;
+    width: 1px;
+    background: #e5e5e5;
+    margin: 0 20px;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+}
+
+.toolbar_nav li:nth-child(7) b:nth-child(1) {
+    margin-right: 34px;
+}
+
+/* header */
+.header {
+    height: 100px;
+    width: 100%;
+    background: #fff;
+}
+
+.header_l {
+    width: 225px;
+    height: 55px;
+    float: left;
+    padding-top: 22px;
+}
+
+.header_l a {
+    display: block;
+    width: 225px;
+    height: 55px;
+    background: url("//status.tuanimg.com/statics/zhe/common/img/logo_zhe800_new.png") no-repeat 0 0;
+}
+
+.search {
+    width: 545px;
+    height: 35px;
+    margin-left: 30px;
+    float: left;
+    margin-top: 30px;
+    border-left: 2px solid #e60044;
+    border-top: 3px solid #e60044;
+    border-bottom: 3px solid #e60044;
+    border-radius: 3px 0 0 3px;
+    position: relative;
+}
+
+.search_l {
+    width: 90px;
+    height: 35px;
+    float: left;
+    color: #fff;
+    font-size: 20px;
+    line-height: 35px;
+    padding-left: 24px;
+    background: url("//status.tuanimg.com/statics/zhe/common/img/index-common.png") -34px -34px no-repeat;
+}
+
+.search_c {
+    float: left;
+    width: 430px;
+    height: 35px;
+}
+
+.search_txt {
+    border: none;
+    width: 380px;
+    height: 24px;
+    outline: 0;
+    float: left;
+    margin-top: 6px;
+}
+
+.search_btn {
+    width: 48px;
+    height: 24px;
+    outline: 0;
+    cursor: pointer;
+    margin-top: 6px;
+    border: none;
+    float: left;
+    background: url("//status.tuanimg.com/statics/zhe/common/img/index-common.png") -34px 0 no-repeat;
+}
+
+.search_r {
+    width: 15px;
+    height: 39px;
+    float: left;
+    position: absolute;
+    top: -2px;
+    right: -15px;
+    background: url("//status.tuanimg.com/statics/zhe/common/img/index-common.png") 0 -34px no-repeat;
+}
+
+.header_r {
+    width: 340px;
+    height: 40px;
+    float: right;
+    margin-top: 30px;
+}
+
+.header_r img {
+    width: 340px;
+    height: 40px;
+}
+
+/* header_nav */
+.header_nav {
+    height: 40px;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.nav {
+    float: left;
+}
+
+.nav li {
+    float: left;
+}
+
+.nav li a {
+    display: block;
+    color: #696969;
+    font-size: 16px;
+    line-height: 35px;
+    width: 130px;
+    height: 40px;
+    text-align: center;
+}
+.nav li a.nav_active{
+    background:#e60044;
+    color:#fff;
+}
+.nav li:nth-child(1) a {
+    width: 150px;
+}
+
+.nav li a:hover {
+    height: 37px;
+    border-bottom: 3px solid #e60044;
+    box-shadow: 0 5px 10px #666;
+}
+
+.sign {
+    margin-top: 5px;
+    float: right;
+}
+
+.sign a {
+    display: block;
+    width: 126px;
+    height: 34px;
+    background-image: url("http://z3.tuanimg.com/imagev2/site/252x68.d881736ade47ab426df86e928a1a2fa1.gif");
+    background-size: 100%;
+    position: relative;
+}
+
+.sign_img {
+    width: 500px;
+    height: 360px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 999;
+    display: none;
+}
+
+.sign_img img {
+    width: 500px;
+    height: 360px;
+}
+
+.sign a:hover .sign_img {
+    display: block;
+}
+
+
+/* junav_fix */
+.junav_fix{
+    height:83px;
+    width:100%;
+    box-shadow:0 0 5px #646464;
+    background:#fff;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:10000;
+    overflow:hidden;
+    display:none;
+    .junav_fix_top{
+        height:40px;
+        .fix_nav{
+            float:left;
+            width:780px;
+            li{
+                float:left;
+                a{
+                    display:block;
+                    height:40px;
+                    line-height:40px;
+                    margin-right:20px;
+                    color:#666;
+                    &:hover{
+                        color:#e60044;
+                    }
+                }
+                .tobold{
+                    font-weight:bold;
+                    color:#e60044;
+                }
+            }
+        }
+        .fix_search{
+            width:206px;
+            height:30px;
+            float:right;
+            margin-top:5px;
+            form{
+                width:210px;
+                height:29px;
+                .fix_txt{
+                    width:114px;
+                    padding-left:10px;
+                    height:27px;
+                    border:1px solid #e60044;
+                    float:left;
+                    line-height:28px;
+                    background:#fff;
+                    color:#999;
+                    font-size:12px;
+                }
+                .fix_btn{
+                    width:82px;
+                    height:29px;
+                    float:left;
+                    border:0;
+                    cursor: pointer;
+                    background:url("//status.tuanimg.com/statics/zhe/common/img/index-common.png") -189px 0 no-repeat;
+                }
+            }
+
+        }
+    }
+    .junav_fix_bottom{
+        height:40px;
+        border-top:3px solid #ff404c;
+        .areahome{
+            width:1200px;
+            margin:0 auto;
+            li{
+                float:left;
+                a{
+                    display:block;
+                    height:40px;
+                    line-height:40px;
+                    margin-right:20px;
+                    color:#666;
+                    &:hover{
+                        color:#e60044;
+                    }
+
+                }
+                .tobold{
+                    font-weight:bold;
+                    color:#e60044;
+                }
+            }
+        }
+
+    }
+}
+
+/* hot */
+.hot {
+    height: 200px;
+    margin-top: 34px;
+}
+
+.hot_top {
+    height: 34px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ff404c;
+    position: relative;
+}
+
+.hot_top img {
+    width: 154px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hot_top i {
+    width: 6px;
+    height: 6px;
+    background: #ff404c;
+    border-radius: 50%;
+    position: absolute;
+    left: 170px;
+    top: 16px;
+}
+
+.hot_top p {
+    position: absolute;
+    left: 180px;
+    width: 200px;
+    line-height: 40px;
+    font-size: 12px;
+}
+
+.hot_top p a {
+    color: #666;
+}
+
+.hot_top p a:hover {
+    color: #ff404c;
+}
+
+.hot_bottom ul{
+    height: 159px;
+    display: flex;
+    justify-content: space-between;
+    overflow:hidden;
+    .pic, .pic img {
+        width: 232px;
+        height: 159px;
+    }
+    .pic a {
+        display: block;
+        width: 232px;
+        height: 159px;
+        transition:all 0.5s;
+        &:hover{
+            box-shadow:0 0 15px #888;
+        }
+    }
+}
+
+/* shop_list */
+
+.list_shop {
+    width: 283px;
+    height: 345px;
+    margin: 0 11px 30px;
+    background: #fff;
+    float: left;
+    &:hover{
+        box-shadow:0 10px 10px #ccc;
+    }
+}
+
+.list_shop > a {
+    display: block;
+    width: 283px;
+    height: 283px;
+}
+
+.list_shop > a img {
+    width: 283px;
+    height: 283px;
+}
+
+.shop_tit, .coupon_collect {
+    width: 263px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+
+.shop_tit a {
+    float: left;
+    width: 195px;
+    font-size: 12px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.shop_tit a:hover {
+    text-decoration: underline;
+}
+
+.shop_tit span {
+    float: right;
+    color: #999;
+    font-size: 12px;
+}
+
+.coupon_collect span {
+    font-size: 16px;
+    color: #ec1611;
+    float: left;
+    width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.coupon_collect .list_price{
+    font-size:12px;
+    color:#999;
+    text-decoration:line-through;
+}
+.coupon_collect a {
+    float: right;
+    width: 50px;
+    height: 20px;
+    padding-left: 18px;
+    line-height: 16px;
+    margin-top: 8px;
+    background: url("//z6.tuanimg.com/v3/src/img/common/big_bg_img_v3.png") no-repeat -493px -64px;
+    font-size: 12px;
+    color: #999;
+    text-align:right;
+}
+
+.coupon_collect a:hover {
+    color: #ec1611;
+}
+
+/* index_bottom */
+
+.index_bottom{
+    height:260px;
+    background: #f2f2f2;
+}
+
+
+/* about */
+.about{
+    height:300px;
+    border-top:3px solid #ec1611;
+    background:#fff;
+}
+.area{
+    height:270px;
+    padding-top:28px;
+    li{
+        float:left;
+        height:270px;
+        span{
+            display:block;
+            width:80px;
+            height:80px;
+            margin-bottom:14px;
+        }
+        .aboutus{
+            background:url("//status.tuanimg.com/statics/zhe/common/img/foot_icon.png") no-repeat;
+        }
+        .shopguide{
+            background:url("//status.tuanimg.com/statics/zhe/common/img/foot_icon.png") -95px 0 no-repeat;
+        }
+        .busscom{
+            background:url("//status.tuanimg.com/statics/zhe/common/img/foot_icon.png") 0 -95px no-repeat;
+        }
+        .usersafe{
+            background:url("//status.tuanimg.com/statics/zhe/common/img/foot_icon.png") -190px 0 no-repeat;
+        }
+        .nexttothere{
+            background:url("//status.tuanimg.com/statics/zhe/common/img/foot_icon.png") -95px -95px no-repeat;
+        }
+        h3{
+            font-size:16px;
+            font-weight:normal;
+            color:#333;
+            height:30px;
+            line-height:30px;
+        }
+        a{
+            display:block;
+            width:85px;
+            height:24px;
+            color:#999;
+            line-height:24px;
+            overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;
+            font-size:12px;
+            &:hover{
+                text-decoration: underline;
+                color: #ec1611;
+            }
+        }
+    }
+    .w1{
+        width:140px;
+    }
+    .w2{
+        width:140px;
+        padding-left:60px;
+    }
+    .w3{
+        width:180px;
+        padding-left:60px;
+        h4{
+            font-weight:normal;
+            height:24px;
+            line-height:24px;
+            font-size:12px;
+            color:#999;
+            a{
+                display:inline;
+                em{
+                    color:#ec1611;
+                    font-style:normal;
+                }
+            }
+            .w3_txt{
+                height:21px;
+                line-height:21px;
+                width:98px;
+                padding-left:5px;
+                color:#ccc;
+                border:1px solid #eaeaea;
+                vertical-align:middle;
+                font-size:12px;
+                margin:0;
+            }
+            .w3_btn{
+                height:25px;
+                line-height:25px;
+                width:42px;
+                color:#999;
+                border:1px solid #eaeaea;
+                border-left:0;
+                vertical-align:middle;
+                background:#fafafa;
+                font-size:12px;
+                padding:1px 6px;
+            }
+        }
+    }
+    .w4{
+        width:170px;
+        .bottom_qrcode_wrapper{
+            width:104px;
+            height:220px;
+            margin:0 auto;
+            background:url("//status.tuanimg.com/statics/zhe/common/img/footer_code.png") 0 0 no-repeat;
+        }
+        span{
+            width:170px;
+            height:30px;
+            line-height:30px;
+            font-size:14px;
+            colorz:#666;
+            text-align:center;
+        }
+    }
+}
+
+
+/* sidebar */
+.sidebar{
+    width:34px;
+    height:100%;
+    min-height:594px;
+    position:fixed;
+    bottom:0;
+    right:0;
+    z-index:100000;
+    font-size:12px;
+    color:#fff;
+    background:#000;
+    .side_tab{
+        width:34px;
+        height:133px;
+        position:absolute;
+        top:28px;
+        left:0;
+        overflow:hidden;
+        .tab_icon{
+            display:block;
+            width:19px;
+            height:17px;
+            margin:14px auto 0;
+            background:url("//status.tuanimg.com/statics/zhe/common/img/sidebar_cart.png");
+        }
+        .tab_txt{
+            text-align:center;
+            position:absolute;
+            top:40px;
+            left:7px;
+            line-height:16px;
+            overflow:hidden;
+            width:20px;
+            height:50px;
+            color:#fff;
+        }
+        .tab_sup{
+            position:absolute;
+            top:100px;
+            right:5px;
+            text-align:center;
+            width:20px;
+            height:20px;
+            border-radius:50%;
+            background:url("//z5.tuanimg.com/v2/core/img/side_golds.png") -1px -95px;
+            line-height:19px;
+            color:#fff;
+            margin-right:2px;
+        }
+        &:hover{
+            background:#f00;
+            .tab_sup{
+                color:#f00;
+                background:url("//z5.tuanimg.com/v2/core/img/side_golds.png") -1px -120px;
+            }
+        }
+    }
+    .order{
+        width:34px;
+        height:42px;
+        display:block;
+        position:absolute;
+        top:161px;
+        left:0;
+        line-height:15px;
+        .order_icon{
+            background:url("//z5.tuanimg.com/v2/core/img/side_golds.png") 6px -188px no-repeat;
+            width:34px;
+            height:42px;
+        }
+        .tab_tip{
+            width:125px;
+            height:42px;
+            position:absolute;
+            right:34px;
+            top:0;
+            line-height:42px;
+            text-align:center;
+            color:#fff;
+            background-color:#c7000b;
+            display:none;
+        }
+        &:hover{
+            background-color:#c7000b;
+            .tab_tip{
+                display:block;
+            }
+        }
+    }
+    .side_coupons{
+        width:34px;
+        height:42px;
+        position:absolute;
+        top:203px;
+        left:0;
+        .coupons_icon{
+            height:42px;
+            position:relative;
+            margin-top:12px;
+            margin-left:6px;
+            background:url("//z5.tuanimg.com/v2/core/img/quan_iconnew.png") 1px 0 no-repeat;
+        }
+        .tab_coupons{
+            width:90px;
+            height:42px;
+            position:absolute;
+            top:0;
+            right:34px;
+            color:#fff;
+            background:#c7000b;
+            line-height:42px;
+            text-align:center;
+            display:none;
+        }
+        &:hover{
+            background:#c7000b;
+            .tab_coupons{
+                display:block;
+            }
+        }
+    }
+    .collect{
+        display:block;
+        width:34px;
+        height:42px;
+        position:absolute;
+        top:245px;
+        left:0;
+        .collect_icon{
+            height:42px;
+            margin-top:12px;
+            margin-left:6px;
+            background:url("//z5.tuanimg.com/v2/core/img/myFavorites.png") 1px 0 no-repeat;
+        }
+        .tab_collect{
+            width:90px;
+            height:42px;
+            position:absolute;
+            top:0;
+            right:34px;
+            color:#fff;
+            background:#c7000b;
+            line-height:42px;
+            text-align:center;
+            display:none;
+        }
+        &:hover{
+            background-color:#c7000b;
+            .tab_collect{
+                display:block;
+            }
+        }
+    }
+    .msg{
+        display:block;
+        width:34px;
+        height:42px;
+        position:absolute;
+        top:287px;
+        left:0;
+        .msg_icon{
+            height:42px;
+            background:url("//z5.tuanimg.com/v2/core/img/side_golds.png") 4px -227px no-repeat;
+        }
+        .tab_msg{
+            width:90px;
+            height:42px;
+            position:absolute;
+            top:0;
+            right:34px;
+            color:#fff;
+            background:#c7000b;
+            line-height:42px;
+            text-align:center;
+            display:none;
+        }
+        &:hover{
+            background-color:#c7000b;
+            .tab_msg{
+                display:block;
+            }
+        }
+    }
+    .checkin{
+        width:34px;
+        height:42px;
+        position:absolute;
+        bottom:210px;
+        left:0;
+        margin-bottom:10px;
+        .checkin_icon{
+            height:42px;
+            background:url("//z5.tuanimg.com/v2/core/img/sidePanel_checkin1N.gif") no-repeat;
+        }
+        .tab_checkin{
+            position:absolute;
+            right:34px;
+            top:0;
+            text-align:center;
+            color:#fff;
+            background:#c7000b;
+            width:89px;
+            height:36px;
+            line-height:18px;
+            padding:3px;
+            display:none;
+        }
+        &:hover{
+            background-color:#c7000b;
+            .checkin_icon{
+                background:url("//z5.tuanimg.com/v2/core/img/side_golds.png") 0 -47px no-repeat;
+            }
+            .tab_checkin{
+                display:block;
+            }
+        }
+    }
+    .gender{
+        display:block;
+        width:34px;
+        height:42px;
+        position:absolute;
+        bottom:168px;
+        left:0;
+        .gender_icon{
+            background:url("//z5.tuanimg.com/v2/core/img/sidePanelIconsNew.png") no-repeat;
+            background-position:-636px 0;
+            height:42px;
+        }
+        .tab_gender{
+            width:125px;
+            height:42px;
+            position:absolute;
+            right:34px;
+            top:0;
+            background:#c7000b;
+            padding-right:10px;
+            display:none;
+            .gender_version{
+                font-size:12px;
+                color:#fff;
+                padding:2px;
+                border:1px solid #fff;
+                border-radius:10%;
+                height:14px;
+                line-height:14px;
+                margin:12px 2px 0;
+                float:right;
+            }
+        }
+        &:hover{
+            background-color:#c7000b;
+            .tab_gender{
+                display:block;
+            }
+        }
+    }
+    .qrcode{
+        display:block;
+        position:absolute;
+        bottom:126px;
+        left:0;
+        width:34px;
+        height:42px;
+        .qrcode_icon{
+            width:34px;
+            height:42px;
+            background:url("//z5.tuanimg.com/v2/core/img/sidePanelIconsNew.png") -267px 0 no-repeat;
+        }
+        .tab_qrcode{
+            width:106px;
+            height:144px;
+            position:absolute;
+            right:34px;
+            top:0;
+            background:url("//status.tuanimg.com/statics/zhe/components/sidebar/img/side_two_dimension.png") no-repeat;
+            margin-right:-2px;
+            display:none;
+        }
+        &:hover{
+            background:#c7000b;
+            .tab_qrcode{
+                display:block;
+            }
+        }
+    }
+
+    .faq{
+        display:block;
+        position:absolute;
+        bottom:84px;
+        left:0;
+        width:34px;
+        height:42px;
+        .faq_icon{
+            width:34px;
+            height:42px;
+            background:url("//z5.tuanimg.com/v2/core/img/sidePanelIconsNew.png") -330px 0 no-repeat;
+        }
+        .tab_faq{
+            width:90px;
+            height:42px;
+            line-height:42px;
+            text-align:center;
+            color:#fff;
+            position:absolute;
+            right:34px;
+            top:0;
+            background:#c7000b;
+            display:none;
+        }
+        &:hover{
+            background:#c7000b;
+            .tab_faq{
+                display:block;
+            }
+        }
+    }
+    .feedback{
+        display:block;
+        position:absolute;
+        bottom:42px;
+        left:0;
+        width:34px;
+        height:42px;
+        .feedback_icon{
+            width:34px;
+            height:42px;
+            background:url("//z5.tuanimg.com/v2/core/img/sidePanelIconsNew.png") -501px 0 no-repeat;
+        }
+        .tab_feedback{
+            width:90px;
+            height:42px;
+            line-height:42px;
+            text-align:center;
+            color:#fff;
+            position:absolute;
+            right:34px;
+            top:0;
+            background:#c7000b;
+            display:none;
+        }
+        &:hover{
+            background:#c7000b;
+            .tab_feedback{
+                display:block;
+            }
+        }
+    }
+    .totop{
+        display:block;
+        position:absolute;
+        bottom:0;
+        left:0;
+        width:34px;
+        height:42px;
+        .totop_icon{
+            width:34px;
+            height:42px;
+            background:url("//z5.tuanimg.com/v2/core/img/sidePanelIconsNew.png") -554px 0 no-repeat;
+        }
+        .tab_totop{
+            width:90px;
+            height:42px;
+            line-height:42px;
+            text-align:center;
+            color:#fff;
+            position:absolute;
+            right:34px;
+            top:0;
+            background:#c7000b;
+            display:none;
+        }
+        &:hover{
+            background:#c7000b;
+            .tab_totop{
+                display:block;
+            }
+        }
+    }
+}
+
+/* footer */
+.footer{
+    padding-top:20px;
+    height:160px;
+    text-align:center;
+    letter-spacing: 1px;
+    font-size:12px;
+    color:#999;
+    line-height:30px;
+    a{
+        letter-spacing: 1px;
+        font-size:12px;
+        color:#999;
+        line-height:30px;
+        &:hover{
+            text-decoration:underline;
+        }
+    }
+    .link{
+        height:20px;
+        width:750px;
+        margin:0 auto;
+        span{
+            float:left;
+            height:20px;
+            line-height:20px;
+        }
+        .links{
+            float:left;
+            width:620px;
+            height:20px;
+            line-height:20px;
+            position:relative;
+            overflow:hidden;
+            .scoll_link{
+                height:20px;
+                line-height:20px;
+                position:absolute;
+                top:0;
+                left:0;
+                li{
+                    width:100%;
+                    height:20px;
+                    overflow:hidden;
+                    line-height:20px;
+                    a{
+                        margin-right:10px;
+                        float:left;
+                        line-height:20px;
+                    }
+                }
+            }
+        }
+        .link_more{
+            float:right;
+            width:52px;
+            line-height:20px;
+            &:hover{
+                color:#ec1611;
+            }
+        }
+    }
+    .footer_center{
+        height:28px;
+        width:330px;
+        margin:0 auto;
+        margin-top:7px;
+        a{
+            &:nth-child(1){
+                width:30px;
+                height:28px;
+                float:left;
+                margin-right:12px;
+                background:url("//status.tuanimg.com/statics/zhe/subject/img/logo.jpg") no-repeat;
+                background-size:30px 28px;
+            }
+            &:nth-child(2){
+                width:70px;
+                height:26px;
+                float:left;
+                margin-right:12px;
+                background:url("//status.tuanimg.com/statics/zhe/common/img/cert.png");
+                background-size:contain;
+            }
+            &:nth-child(3){
+                width:28px;
+                height:28px;
+                float:left;
+                background:url("//status.tuanimg.com/statics/zhe/common/img/gsrz-icon.jpg");
+                background-size:contain;
+            }
+        }
+    }
+}
