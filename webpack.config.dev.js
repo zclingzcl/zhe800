@@ -96,7 +96,7 @@ let webpackConfig = {
         }),
         //设置每一次build之前先删除dist
         new CleanWebpackPlugin(
-            ['dist/*',],　     //匹配删除的文件
+            ['dist/static/*',],　     //匹配删除的文件
             {
                 root: __dirname,   //根目录
                 verbose: true,    //开启在控制台输出信息
