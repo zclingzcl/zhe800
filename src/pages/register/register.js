@@ -51,7 +51,7 @@ class Register {
             this.oPhone.style.borderColor ="#d2d2d2";
         };
         this.oPhone.onblur = () => {
-            var regPhone=/^[1][3-5|7-8][0-9]{9}$/
+            var regPhone=/^[1][3-5|7-8][0-9]{9}$/;
             if (this.oPhone.value == "") {
                 this.oPhone.value = this.oPhone.content;
                 this.oPhone.style.borderColor = "#f00";
@@ -64,7 +64,6 @@ class Register {
                     this.txtMsg.innerHTML="";
                     this.oPhone.style.borderColor ="#d2d2d2";
                     this.a=true;
-                    this.getCookie();
                 }else{
                     this.txtMsg.innerHTML="手机格式号码错误";
                     this.oPhone.style.borderColor="#f00";
@@ -175,39 +174,32 @@ class Register {
         }
 
 
-        this.logon()
+        this.register()
 
     }
 
-    getCookie(){
-        this.account=$.cookie("account") ? JSON.parse($.cookie("account")) :  [];
-        if(this.account.length>0){
-            for(var i=0;i<this.account.length;i++){
-                if(this.oPhone.value==this.account[i].name){
-                    this.txtMsg.innerHTML="用户名已存在";
-                    this.txtMsg.style.color="#f00";
-                    this.oPhone.borderColor="#f00";
-                }
-            }
-        }
-        console.log($.cookie("account"))
-    }
 
 
-    logon(){
+
+    register(){
         var that=this;
         // this.account=JSON.parse($.cookie("account")) || [];
         this.item.onclick=function(){
             if(that.a && that.b && that.c && that.d && that.e){
+                if((localStorage.userInfo||'[]').indexOf(that.oPhone.value)>-1) {
+                    alert("该用户名已被注册！");
+                    that.oPhone.focus();
+                    return false;
+                }
                 alert("注册成功");
                 // this.href="login.html";
-                var obj={
+                let userInfo=JSON.parse(localStorage.userInfo||'[]'),
+                    obj={
                     name:that.oPhone.value,
                     pass:that.oPass1.value
-                }
-                that.account.push(obj);
-                $.cookie("account",JSON.stringify(that.account),{path:"/"})
-                // console.log($.cookie("account"))
+                };
+                userInfo.push(obj);
+                localStorage.setItem("userInfo", JSON.stringify(userInfo));
             }else{
                 alert("注册失败");
             }

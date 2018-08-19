@@ -19,5 +19,10 @@ module.exports = [
         name:'shoplist',
         html:'shoplist/shoplist.html',
         jsEntry:'shoplist/shoplist.js'
+    },
+    {
+        name:'shopcar',
+        html:'shopcar/shopcar.html',
+        jsEntry:'shopcar/shopcar.js'
     }
 ]

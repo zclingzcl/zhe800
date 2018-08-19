@@ -1,0 +1,288 @@
+.shopcar_layout{
+  width:980px;
+  margin:0 auto;
+}
+
+/* car_header */
+.car_header{
+  height:77px;
+  padding-top:18px;
+  .car_header_r{
+    float:right;
+    width:296px;
+    height:18px;
+    margin-top:30px;
+    background:url("//i4.tuanimg.com/cart/asset/d/step.ff09f3d1.png") no-repeat;
+  }
+}
+
+.redline_box{
+  position:relative;
+  width:100%;
+  .redline{
+    border-bottom:2px solid #ec1611;
+    width:100%;
+    position:absolute;
+    left:0;
+    top:52px;
+  }
+}
+
+
+/* cart_panel */
+.cart_panel{
+  overflow:hidden;
+  font-size:12px;
+  color:#666;
+  .cart_title{
+    height:28px;
+    padding:12px 0;
+    border-bottom:2px solid #fff;
+    line-height:28px;
+    .cart_left{
+      float:left;
+      p{
+        font-size:18px;
+        color:#333;
+        margin-right:20px;
+        float:left;
+      }
+      .car_save{
+        float:left;
+        color:#999;
+        a{
+          color:#428bca;
+        }
+      }
+    }
+    .cart_right{
+      float:right;
+      width:486px;
+      height:28px;
+      background:url("//i4.tuanimg.com/cart/asset/d/new_icon1.7d56c951.png") no-repeat;
+    }
+  }
+  .cart_head{
+    height:20px;
+    padding:12px 0;
+    line-height:20px;
+    font-size:12px;
+    font-weight:bold;
+    padding-left:10px;
+    p{
+      float:left;
+    }
+    .p1{
+      width:60px;
+      overflow:hidden;
+      input{
+        width:12px;
+        height:12px;
+        margin-top:5px;
+        float:left;
+      }
+    }
+    .p2{
+      width:400px;
+      text-indent: 150px;
+
+    }
+    .p3{
+      width:170px;
+      padding-left:15px;
+    }
+    .p4{
+      width:50px;
+      text-align:center;
+    }
+    .p5{
+      width:155px;
+      text-align:right;
+    }
+    .p6{
+      width:72px;
+      margin-left:30px;
+      text-align:center;
+    }
+  }
+}
+
+.car_list{
+  overflow:hidden;
+  tr{
+    border:1px solid #f2f2f2;
+    height:110px;
+    color:#666;
+    background:#fafafa;
+  }
+  .td1{
+    width:64px;
+    input{
+      margin-left:30px;
+    }
+  }
+  .td2{
+    width:140px;
+    padding-top:15px;
+    padding-left:20px;
+    img{
+      width:80px;
+      height:80px;
+    }
+  }
+  .td3{
+    width:260px;
+    padding-right:20px;
+  }
+  .td4{
+    width:144px;
+  }
+  .td5{
+    width:134px;
+    input{
+      width:100px;
+    }
+  }
+  .td6{
+    width:120px;
+    color:#f00;
+    font-size:14px;
+    font-weight:bold;
+  }
+  .td7{
+    width:74px;
+    a:hover{
+      color:#f00;
+      text-decoration:underline;
+    }
+  }
+}
+.fixedbox{
+  height:44px;
+  line-height:44px;
+  border:1px solid #f3f3f3;
+  background:#fff;
+  margin-top:30px;
+  margin-bottom:30px;
+  .fixed_left{
+    float:left;
+    padding-left:10px;
+    width:130px;
+    input{
+      float:left;
+      margin-top:16px;
+      margin-right:6px;
+    }
+    span{
+      float:left;
+      a{
+        margin-right:10px;
+        &:hover{
+          color:#f00;
+          text-decoration:underline;
+        }
+      }
+    }
+  }
+  .fixed_right{
+    float:right;
+    overflow:hidden;
+    .total_price{
+      float:right;
+      a{
+        width:150px;
+        height:44px;
+        line-height:44px;
+        display:block;
+        background:#ddd;
+        color:#999;
+        text-align:center;
+        font-size:18px;
+        font-weight:bold;
+      }
+
+    }
+    .amount_price{
+      float:right;
+      width:auto;
+      line-height:44px;
+      margin-right:10px;
+      strong{
+        font-size:20px;
+        color:#ec1611;
+        vertical-align:-4px;
+        #amount_price{
+          font-style:normal;
+        }
+      }
+    }
+    .amount{
+      float:right;
+      width:auto;
+      margin-right:10px;
+      .shopcar_num{
+        padding:4px;
+        color:#f00;
+        font-weight:bold;
+      }
+    }
+  }
+}
+
+.list{
+  width:66px;
+  overflow:hidden;
+  border:1px solid #e6e6e6;
+  position:fixed;
+  bottom:0;
+  right:100px;
+  margin-bottom:-64px;
+  li{
+    width:66px;
+    height:64px;
+    overflow:hidden;
+    text-align:center;
+    a{
+      display:block;
+      width:66px;
+      height:20px;
+      padding:42px 0 2px;
+      line-height:20px;
+      color:#999;
+      font-size:12px;
+    }
+  }
+  .list1 a{
+    background:url("//i4.tuanimg.com/cart/asset/d/sideicon2.1735880c.png") no-repeat;
+    &:hover{
+      background-position:-66px 0;
+      color:#f00;
+    }
+  }
+  .list2 a{
+    background:url("//i4.tuanimg.com/cart/asset/d/sideicon2.1735880c.png") 0 -64px no-repeat;
+    &:hover{
+      background-position:-66px -64px;
+      color:#f00;
+    }
+  }
+  .list3 a{
+    background:url("//i4.tuanimg.com/cart/asset/d/sideicon2.1735880c.png") 0 -128px no-repeat;
+    &:hover{
+      background-position:-66px -128px;
+      color:#f00;
+    }
+  }
+  .list4 a{
+    background:url("//i4.tuanimg.com/cart/asset/d/sideicon2.1735880c.png") 0 -192px no-repeat;
+    &:hover{
+      background-position:-66px -192px;
+      color:#f00;
+    }
+  }
+}
+
+.shopcar_bottom{
+  padding-bottom:20px;
+  border-top:1px solid #ccc;
+}

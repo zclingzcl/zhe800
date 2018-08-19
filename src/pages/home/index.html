@@ -12,11 +12,12 @@
     <ul class="toolbar_nav clear">
         <li><a href="#">卖家中心</a></li>
         <li><a href="#">帮助中心</a><b></b></li>
-        <li><a href="#">购物车</a><span>0</span><b></b></li>
+        <li class="shopCar"><a href="#">购物车</a><span class="shop_Num">0</span><b></b></li>
         <li><a href="#">我的订单</a><b></b></li>
-        <li class="toolbar_load"><a href="login.html">登录</a> <a href="register.html">免费注册</a><b></b></li>
-        <li><a href="#">QQ登录</a><b></b></li>
-        <li>
+        <li class="toolbar_load login-before"><a href="login.html">登录</a> <a href="register.html">免费注册</a><b></b></li>
+        <li class="login-before"><a href="#">QQ登录</a><b></b></li>
+        <li class="login-user login-info"><a href="#" id="user-name">您好，135****1234</a> <a id="login-out" href="javascript:;">退出</a><b></b></li>
+        <li class="tool_phone">
             <div class="toolbar_phone">
                 <b></b><a href="#">手机版</a><b></b>
             </div>
@@ -77,11 +78,11 @@
 <div class="wrapper layout clear">
     <ul class="index_nav">
         <li>
-            <a href="#">女装</a><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#">内衣</a>
+            <a href="shoplist.html">女装</a><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><a href="#">内衣</a>
             <div class="nav_pop clear">
                 <div class="nav_pop_left">
                     <div class="pop_second">
-                        <h3><a href="#">女装</a></h3>
+                        <h3><a href="shoplist.html">女装</a></h3>
                     </div>
                     <ul class="clear">
                         <li><a href="#">雪纺</a></li>
@@ -1219,10 +1220,10 @@
 
 <!-- sidebar -->
 <div class="sidebar">
-    <a href="#" class="side_tab">
+    <a href="shopcar.html" class="side_tab">
         <span class="tab_icon"></span>
         <div class="tab_txt">购物车</div>
-        <div class="tab_sup">0</div>
+        <div class="tab_sup shop_Num">0</div>
     </a>
     <a href="#" class="order">
         <div class="order_icon"></div>
